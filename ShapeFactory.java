@@ -20,7 +20,17 @@ public class ShapeFactory
     public Paint paint;
     public int width;
     public int height;
-    
+
+    /**
+     * <p>Method for choosing shape and setting parameters:</p>
+     * <li><em>shape</em></li>
+     * <li><em>stroke</em></li>
+     * <li><em>paint</em></li>
+     * <li><em>width</em></li>
+     * <li><em>height</em></li>
+     * <p>of class</p>
+     * @param shape_type parameter for setting number for choosing appropriate shape
+     */
     public ShapeFactory(final int shape_type) {
         this.width = 25;
         this.height = 25;
@@ -81,7 +91,15 @@ public class ShapeFactory
             }
         }
     }
-    
+
+    /**
+     * <p>Method for creating shape of star</p>
+     * @param arms number of line elements of star
+     * @param center coordinates for center
+     * @param rOuter for calculating position of points
+     * @param rInner for calculating position of points
+     * @return created shape
+     * */
     private static Shape createStar(final int arms, final Point center, final double rOuter, final double rInner) {
         final double angle = 3.141592653589793 / arms;
         final GeneralPath path = new GeneralPath();

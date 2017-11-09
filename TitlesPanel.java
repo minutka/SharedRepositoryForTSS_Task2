@@ -20,7 +20,11 @@ public class TitlesPanel extends JPanel implements ActionListener
     private boolean is_done;
     private int start_angle;
     private int shape;
-    
+
+    /**
+     * <p>Initialization of parameters and start animation</p>
+     * @param _shape set parameter to local variable
+     * */
     public TitlesPanel(final int _shape) {
         this.start_angle = 0;
         this.is_done = true;
@@ -35,7 +39,11 @@ public class TitlesPanel extends JPanel implements ActionListener
             this.repaint();
         }
     }
-    
+
+    /**
+     * <p>Animating of shape<p/>
+     * @param g inherited param of <em>paintComponent<em/> method
+     */
     private void doDrawing(final Graphics g) {
         this.is_done = false;
         (this.g2d = (Graphics2D)g).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
