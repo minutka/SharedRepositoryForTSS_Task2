@@ -33,7 +33,6 @@ public class TitlesPanel extends JPanel implements ActionListener
         this.animation.start();
     }
     
-    @Override
     public void actionPerformed(final ActionEvent arg0) {
         if (this.is_done) {
             this.repaint();

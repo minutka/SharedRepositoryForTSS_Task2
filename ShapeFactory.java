@@ -37,11 +37,11 @@ public class ShapeFactory
         this.stroke = new BasicStroke(3.0f);
         switch (shape_type / 10) {
             case 1: {
-                this.shape = createStar(3, new Point(0, 0), this.width / 2.0, this.width / 2.0);
+                this.shape = new Star().createStar(3, new Point(0, 0), this.width / 2.0, this.width / 2.0);
                 break;
             }
             case 3: {
-                this.shape = createStar(5, new Point(0, 0), this.width / 2.0, this.width / 4.0);
+                this.shape = new Star().createStar(5, new Point(0, 0), this.width / 2.0, this.width / 4.0);
                 break;
             }
             case 5: {
